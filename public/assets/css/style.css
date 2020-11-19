@@ -41,7 +41,6 @@ main{
     height: 100vh;
 }
 
-<<<<<<< HEAD
 /* Home page */
 
 .home-container{
@@ -79,7 +78,8 @@ main{
 
 .home-text button:hover {
     background-color: black;
-=======
+}
+
 p {
     color : var(--text-color);
     font-family: var(--text-font);
@@ -120,5 +120,4 @@ p {
         margin: auto;
         padding: auto;
     }
->>>>>>> 09c92d40641614359648c6caea04d2db10144803
 }
