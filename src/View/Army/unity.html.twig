@@ -5,9 +5,42 @@
 {% endblock %}
 
 {% block content %}
-    Coucou !
-    {% for weatherp in weather %}
-        {{dump(weatherp)}}
-    {% endfor %}
+
+    <div class=" row">
+    <div class=" col-8 offset-2">
+
+        <h2>Battle simulation</h2>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Number</th>
+                <th scope="col">Units name</th>
+                <th scope="col">Number</th>
+                <th scope="col">Units name</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for unity in unities.units %}
+                <tr>
+                    <th scope="row">
+                        <input type="number" id="unit" name="units"></th>
+                    <td> {{ unity.name}} </td>
+                    <td>
+                        <input type="number" id="unit" name="units"></th>
+                    </td>
+                    <td> {{ unity.name}} </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+            <input type="submit" value="Submit">
+
+
+
+    </div>
+
+    </div>
+        {{ unity.name}}
 
 {% endblock %}
