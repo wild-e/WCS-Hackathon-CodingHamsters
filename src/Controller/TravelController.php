@@ -13,7 +13,7 @@ class TravelController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function PlanRoute()
+    public function planRoute()
     {
         return $this->twig->render('Page/travel.html.twig');
     }
