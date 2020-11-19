@@ -79,3 +79,51 @@ main{
 .home-text button:hover {
     background-color: black;
 }
+
+/*Battle simulation*/
+
+.battle-container {
+    background-image: url("../images/background-simulation.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+.battle-container h2{
+    padding: 1rem;
+}
+
+.battle-container input {
+    background-color: transparent;
+    font-family: 'Oswald', sans-serif;
+    width: 50%;
+}
+
+.battle-container input:hover {
+    background-color: transparent;
+    vector-effect: none;
+}
+
+.battle-container table {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.5em;
+}
+
+.battle-container .submit {
+    background-color: black;
+    min-width:300px;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 2em;
+    border-radius: 5px;
+    border: none;
+    color:#f7efd3;
+    box-shadow: 1px 1px 12px #f7efd3;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.battle-container .submit:hover {
+    background-color: #475c6c;
+}
