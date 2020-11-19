@@ -22,7 +22,12 @@ class WikiController extends AbstractController
 
         $wikiManager = new WikiManager();
         $searchResults = $wikiManager->searchFor($_POST['search']);
-        return $this->twig->render('Wiki/wiki.html.twig', ['searchResult' => $searchResults]);
+        $searchresults = $searchResults['query']['search'];
+        
+        $searchImage = $wikiManager->searchImage($_POST['search']);
+        $searchImage = $searchImage['query']['pages']['-1']['imageinfo']['0']['url'];
+
+        return $this->twig->render('Wiki/wiki.html.twig', ['searchResults' => $searchresults, 'searchImage' => $searchImage]);
 
         }
         return $this->twig->render('Wiki/wiki.html.twig');
