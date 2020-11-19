@@ -31,8 +31,8 @@ class WeatherController extends AbstractController
             $location = $weather['location'];
             $current = $weather['current'];
             $icone = $weather['current']['weather_icons'];
-            return $this->twig->render('Weather/weather.html.twig',
-            ['weather' => $weather, 'request' => $request, 'location' => $location, 'current' => $current, 'icone' => $icone]);
+            return $this->twig->render('Weather/weather.html.twig', ['weather' => $weather, 'request' => $request,
+            'location' => $location, 'current' => $current, 'icone' => $icone]);
         }
         return $this->twig->render('Weather/weather.html.twig');
     }
