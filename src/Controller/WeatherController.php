@@ -23,8 +23,17 @@ class WeatherController extends AbstractController
      */
     public function weather()
     {
-        $weatherManager = new WeatherManager();
-        $weather = $weatherManager->selectTown();
-        return $this->twig->render('Weather/weather.html.twig', ['weather' => $weather]);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $weatherManager = new WeatherManager();
+            $city = $_POST['name'];
+            $weather = $weatherManager->selectTown($city);
+            $request = $weather['request'];
+            $location = $weather['location'];
+            $current = $weather['current'];
+            $icone = $weather['current']['weather_icons'];
+            return $this->twig->render('Weather/weather.html.twig',
+            ['weather' => $weather, 'request' => $request, 'location' => $location, 'current' => $current, 'icone' => $icone]);
+        }
+        return $this->twig->render('Weather/weather.html.twig');
     }
 }
