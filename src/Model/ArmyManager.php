@@ -4,18 +4,14 @@ namespace App\Model;
 
 use Symfony\Component\HttpClient\HttpClient;
 
-/**
- *
- */
-class WeatherManager
+class ArmyManager
 {
-    public function selectTown($city)
+    public function selectAllUnits()
     {
         $client = HttpClient::create();
         $response = $client->request(
             'GET',
-
-            'http://api.weatherstack.com/current?access_key=0a594b3c9858e1537eaaf10257e03eae&query=' . $city
+            'https://age-of-empires-2-api.herokuapp.com/api/v1/units'
         );
 
         $statusCode = $response->getStatusCode(); // get Response status code 200

@@ -1,0 +1,45 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {{ parent()}} Unities
+{% endblock %}
+
+{% block content %}
+
+    <div class=" row">
+    <div class=" col-8 offset-2">
+
+        <h2>Battle simulation</h2>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Number</th>
+                <th scope="col">Units name</th>
+                <th scope="col">Number</th>
+                <th scope="col">Units name</th>
+            </tr>
+            </thead>
+            <tbody><form method="post">
+                {% for unity in units %}
+                    <tr>
+                        <th scope="row">
+                            <input type="number" id="unit" name="{{ unity.name }}1"></th>
+                        <td> {{ unity.name}} </td>
+                        <td>
+                            <input type="number" id="unit" name="{{ unity.name }}2"></th>
+                        </td>
+                        <td> {{ unity.name}} </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <input type="submit" value="Submit">
+            </form>
+
+    </div>
+
+    </div>
+        {{ unity.name}}
+
+{% endblock %}

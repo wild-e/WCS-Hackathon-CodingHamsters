@@ -25,4 +25,14 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('Home/index.html.twig');
     }
+
+    public function quote()
+    {
+        return $this->twig->render('Quote/index.html.twig');
+    }
+
+    public function weather()
+    {
+        return $this->twig->render('Weather/index.html.twig');
+    }
 }
