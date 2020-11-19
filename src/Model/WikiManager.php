@@ -9,8 +9,10 @@ class WikiManager
     public function searchFor(string $input)
     {
         $client = HttpClient::create();
-        $response = $client->request('GET', 
-        'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch='.$input);
+        $response = $client->request(
+            'GET',
+            'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=' . $input
+        );
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
 
@@ -28,8 +30,10 @@ class WikiManager
     public function searchImage(string $input)
     {
         $client = HttpClient::create();
-        $response = $client->request('GET', 
-        'https://en.wikipedia.org/w/api.php?action=query&prop=imageinfo&format=json&iiprop=url&generator=images&titles='.$input);
+        $response = $client->request(
+            'GET',
+            'https://en.wikipedia.org/w/api.php?action=query&prop=imageinfo&format=json&iiprop=url&generator=images&titles=' . $input
+        );
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
 
@@ -43,11 +47,4 @@ class WikiManager
             return $content;
         }
     }
-
-
-
-
-
-
-    
 }

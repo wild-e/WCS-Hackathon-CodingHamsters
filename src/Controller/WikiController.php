@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Controller;
 
 use App\Model\WikiManager;
@@ -17,18 +16,15 @@ class WikiController extends AbstractController
      */
     public function wiki()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') 
-        {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $wikiManager = new WikiManager();
+            $searchResults = $wikiManager->searchFor($_POST['search']);
+            $searchresults = $searchResults['query']['search'];
 
-        $wikiManager = new WikiManager();
-        $searchResults = $wikiManager->searchFor($_POST['search']);
-        $searchresults = $searchResults['query']['search'];
-        
-        $searchImage = $wikiManager->searchImage($_POST['search']);
-        $searchImage = $searchImage['query']['pages']['-1']['imageinfo']['0']['url'];
+            $searchImage = $wikiManager->searchImage($_POST['search']);
+            $searchImage = $searchImage['query']['pages']['-1']['imageinfo']['0']['url'];
 
-        return $this->twig->render('Wiki/wiki.html.twig', ['searchResults' => $searchresults, 'searchImage' => $searchImage]);
-
+            return $this->twig->render('Wiki/wiki.html.twig', ['searchResults' => $searchresults, 'searchImage' => $searchImage]);
         }
         return $this->twig->render('Wiki/wiki.html.twig');
     }
