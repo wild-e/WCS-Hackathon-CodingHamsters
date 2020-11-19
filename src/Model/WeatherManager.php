@@ -9,12 +9,13 @@ use Symfony\Component\HttpClient\HttpClient;
  */
 class WeatherManager
 {
-    public function selectTown()
+    public function selectTown($city)
     {
         $client = HttpClient::create();
         $response = $client->request(
             'GET',
-            'http://api.weatherstack.com/current?access_key=0a594b3c9858e1537eaaf10257e03eae&query=Paris'
+
+            'http://api.weatherstack.com/current?access_key=0a594b3c9858e1537eaaf10257e03eae&query=' . $city
         );
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
