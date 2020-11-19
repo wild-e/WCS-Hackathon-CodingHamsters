@@ -14,6 +14,7 @@ class WeatherManager
         $client = HttpClient::create();
         $response = $client->request(
             'GET',
+
             'http://api.weatherstack.com/current?access_key=0a594b3c9858e1537eaaf10257e03eae&query=' . $city
         );
 
