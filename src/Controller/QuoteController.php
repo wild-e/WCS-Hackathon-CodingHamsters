@@ -9,10 +9,11 @@ class QuoteController extends AbstractController
     public function list()
     {
         $quoteManager = new QuoteManager();
-        $quotes = $quoteManager->selectAll();
+        $quotes = $quoteManager->selectAllAction();
 
-        var_dump($quotes);
+        $quote = $quotes['quotes'];
+        $randKeys = array_rand($quote, 1);
 
-        return $this->twig->render('Quote/index.html.twig', ['quotes' => $quotes]);
+        return $this->twig->render('Quote/index.html.twig', ['quote' => $quote[$randKeys]]);
     }
 }

@@ -6,10 +6,13 @@ use Symfony\Component\HttpClient\HttpClient;
 
 class QuoteManager
 {
-    public function selectAll()
+    public function selectAllAction()
     {
         $client = HttpClient::create();
-        $response = $client->request('GET', 'https://quote-garden.herokuapp.com/api/v2/quotes/random');
+        $response = $client->request(
+            'GET',
+            'https://quote-garden.herokuapp.com/api/v2/genres/courage?page=1&limit=100'
+        );
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
 
