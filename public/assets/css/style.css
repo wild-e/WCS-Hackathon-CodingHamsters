@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Oswald&family=Syne+Tactile&display=swap');
+
+html{
+    /* FONTS */
+--title-font: 'MedievalSharp', cursive;
+--text-font: 'Oswald', sans-serif;
+--third-font : 'Syne Tactile', cursive;
+    /* COLORS  */
+--text-color: #475c6c;
+--main-color: #f7efd3;
+--secondary-color: #8a8583;
+--third-color: #cd8b62;
+--fourth-color: #eed7a1;
+}
+
+body{
+font-family: var(--text-font);
+}
+
+h1, h2, h3, h4, h5, h6{
+    padding : 4rem;
+    font-family: var(--title-font);
+}
+
+main{
+    background-color: var(--main-color);
+}
+
+.container{
+    height: 100vh;
+}
+
+#orbisPlan{
+    width: 100%;
+    height: 100vh;
+}
+
+p {
+    color : var(--text-color);
+    font-family: var(--text-font);
+    font-size : 1em;
+}
+
+.weather-container{
+    background-image: url("../images/fondweather.png");
+    background-size: cover;
+    background-position-x : center;
+    width: 100%;
+    height: 100vh;
+}
+
+.weatherform{
+    background-color: #EADCB6;
+    border-radius: 1em;
+    border: 0.1em solid black;
+    box-shadow: -0.3em -0.3em black;
+}
+
+.description{
+    background-color: #EADCB6;
+    border-radius: 1em;
+    border: 0.1em solid black;
+    box-shadow: 0.3em -0.3em black;
+}
+
+.donne{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 567px)
+{
+    .weatherform, .description{
+        margin: auto;
+        padding: auto;
+    }
+}
