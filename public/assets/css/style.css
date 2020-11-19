@@ -41,6 +41,7 @@ main{
     height: 100vh;
 }
 
+<<<<<<< HEAD
 /* Home page */
 
 .home-container{
@@ -78,4 +79,46 @@ main{
 
 .home-text button:hover {
     background-color: black;
+=======
+p {
+    color : var(--text-color);
+    font-family: var(--text-font);
+    font-size : 1em;
+}
+
+.weather-container{
+    background-image: url("../images/fondweather.png");
+    background-size: cover;
+    background-position-x : center;
+    width: 100%;
+    height: 100vh;
+}
+
+.weatherform{
+    background-color: #EADCB6;
+    border-radius: 1em;
+    border: 0.1em solid black;
+    box-shadow: -0.3em -0.3em black;
+}
+
+.description{
+    background-color: #EADCB6;
+    border-radius: 1em;
+    border: 0.1em solid black;
+    box-shadow: 0.3em -0.3em black;
+}
+
+.donne{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 567px)
+{
+    .weatherform, .description{
+        margin: auto;
+        padding: auto;
+    }
+>>>>>>> 09c92d40641614359648c6caea04d2db10144803
 }

@@ -1,34 +1,43 @@
 {% extends 'layout.html.twig' %}
 
 {% block title %}
-    {{ parent()}} Weather Map
+    {{parent()}} - Weather Map
 {% endblock %}
 
 {% block content %}
-<form action="/Weather/weather" method="POST">
-    <div class="name">
-        <label for="name">Enter the city you want to attack: </label>
-        <input type="text" name="name" id="name" required>
+<div class="weather-container">
+    <div class="row justify-content-between m-auto">
+        <div class="formulaire mt-5 ml-5">
+            <form class="weatherform p-2 text-center" action="/Weather/weather" method="POST">
+                <div class="name">
+                    <label class="text-center" for="name"><p>Enter the city you want to attack:<p> </label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="submit">
+                <button type="submit" class="btn btn-secondary">Choose your target</button>
+                </div>
+            </form>
+        </div>
+        <div class ="description mt-5 mr-5">
+            {% if weather is not null %}
+                <ul class="donne p-2 text-center">
+                    <li><p>You want to attack {{location.name}}.</p></li>
+                    <li><p>This city is in {{location.country}}.</p></li>
+                    <li><p> The temperature is {{current.temperature}}°C.</p></li>
+                    {% if current.temperature < 10 %}<li><p> Low temperature advise : Take your fur.</li></p>
+                    {% elseif current.temperature > 25 %}
+                    <li><p> Hight temperature advise : Take a lot of water. </p></li>
+                    {% endif %}
+                    <li><p> The wind blows at {{current.wind_speed}} km/h.</p></li>
+                    {% if current.wind_speed < 30 %}
+                    <li><p> Low wind speed advise : Signal flags will fly badly. </p></li>
+                    {% elseif current.wind_speed > 30 %}
+                    <li><p> Hight wind speed advise : Remember to warn the archers. </p></li>
+                    {% endif %}
+                    <li><p> The humidity is {{current.humidity}}, the time will be {% for ico in icone %}<img src="{{ico}}" style="width:20px">{% endfor %}</p></li>
+                </ul>          
+            {% endif %}
+        </div>
     </div>
-    <div class="submit">
-        <input type="submit" value="Subscribe!">
-    </div>
-</form>
-    {% if weather is not null %}
-        <p> You want to attack {{location.name}}.</p>
-        <p> This city is in {{location.country}}.</p>
-        <p> The temperature is {{current.temperature}}°C.</p>
-        {% if current.temperature < 10 %}
-            <p> Low temperature advise : Take your fur. </p>
-        {% elseif current.temperature > 25 %}
-            <p> Hight temperature advise : Take a lot of water. </p>
-        {% endif %}
-            <p> The wind blows at {{current.wind_speed}} km/h.</p>
-        {% if current.wind_speed < 30 %}
-            <p> Low wind speed advise : Signal flags will fly badly. </p>
-        {% elseif current.wind_speed > 30 %}
-            <p> Hight wind speed advise : Remember to warn the archers. </p>
-        {% endif %}
-            <p> The humidity is {{current.humidity}}, the time will be {% for ico in icone %}<img src="{{ico}}" style="width:20px">{% endfor %}</p>
-    {% endif %}
+</div>
 {% endblock %}

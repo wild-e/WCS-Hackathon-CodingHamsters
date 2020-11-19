@@ -29,6 +29,7 @@ class WikiManager
 
     public function searchImage(string $input)
     {
+        $input = trim($input);
         $client = HttpClient::create();
         $response = $client->request(
             'GET',
