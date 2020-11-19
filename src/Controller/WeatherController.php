@@ -9,9 +9,9 @@
 
 namespace App\Controller;
 
-use App\Model\NameApiManager;
+use App\Model\WeatherManager;
 
-class HomeController extends AbstractController
+class WeatherController extends AbstractController
 {
     /**
      * Display home page
@@ -21,8 +21,10 @@ class HomeController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function index()
+    public function weather()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $weatherManager = new WeatherManager();
+        $weather = $weatherManager->selectTown();
+        return $this->twig->render('Weather/weather.html.twig', ['weather' => $weather]);
     }
 }
