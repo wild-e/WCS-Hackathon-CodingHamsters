@@ -8,8 +8,8 @@
  */
 
 namespace App\Controller;
-use App\Model\WeatherManager;
 
+use App\Model\WeatherManager;
 
 class WeatherController extends AbstractController
 {

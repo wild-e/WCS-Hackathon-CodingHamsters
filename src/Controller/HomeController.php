@@ -8,8 +8,8 @@
  */
 
 namespace App\Controller;
-use App\Model\NameApiManager;
 
+use App\Model\NameApiManager;
 
 class HomeController extends AbstractController
 {
