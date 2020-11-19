@@ -5,9 +5,30 @@
 {% endblock %}
 
 {% block content %}
-Coucou !
-{% for weatherp in weather %}
-{{dump(weatherp)}}
-{% endfor %}
-
+<form action="/Weather/weather" method="POST">
+    <div class="name">
+        <label for="name">Enter the city you want to attack: </label>
+        <input type="text" name="name" id="name" required>
+    </div>
+    <div class="submit">
+        <input type="submit" value="Subscribe!">
+    </div>
+</form>
+    {% if weather is not null %}
+        <p> You want to attack {{location.name}}.</p>
+        <p> This city is in {{location.country}}.</p>
+        <p> The temperature is {{current.temperature}}°C.</p>
+        {% if current.temperature < 10 %}
+            <p> Low temperature advise : Take your fur. </p>
+        {% elseif current.temperature > 25 %}
+            <p> Hight temperature advise : Take a lot of water. </p>
+        {% endif %}
+            <p> The wind blows at {{current.wind_speed}} km/h.</p>
+        {% if current.wind_speed < 30 %}
+            <p> Low wind speed advise : Signal flags will fly badly. </p>
+        {% elseif current.wind_speed > 30 %}
+            <p> Hight wind speed advise : Remember to warn the archers. </p>
+        {% endif %}
+            <p> The humidity is {{current.humidity}}, the time will be {% for ico in icone %}<img src="{{ico}}" style="width:20px">{% endfor %}</p>
+    {% endif %}
 {% endblock %}
