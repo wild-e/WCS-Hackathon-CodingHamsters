@@ -34,3 +34,45 @@ main{
     width: 100%;
     height: 100vh;
 }
+
+p {
+    color : var(--text-color);
+    font-family: var(--text-font);
+    font-size : 1em;
+}
+
+.weather-container{
+    background-image: url("../images/fondweather.png");
+    background-size: cover;
+    background-position-x : center;
+    width: 100%;
+    height: 100vh;
+}
+
+.weatherform{
+    background-color: #EADCB6;
+    border-radius: 1em;
+    border: 0.1em solid black;
+    box-shadow: -0.3em -0.3em black;
+}
+
+.description{
+    background-color: #EADCB6;
+    border-radius: 1em;
+    border: 0.1em solid black;
+    box-shadow: 0.3em -0.3em black;
+}
+
+.donne{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 567px)
+{
+    .weatherform, .description{
+        margin: auto;
+        padding: auto;
+    }
+}
