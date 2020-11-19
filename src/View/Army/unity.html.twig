@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {{ parent()}} Unities
+{% endblock %}
+
+{% block content %}
+    Coucou !
+    {% for weatherp in weather %}
+        {{dump(weatherp)}}
+    {% endfor %}
+
+{% endblock %}
