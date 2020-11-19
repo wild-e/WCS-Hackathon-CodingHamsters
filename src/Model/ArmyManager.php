@@ -6,7 +6,7 @@ use Symfony\Component\HttpClient\HttpClient;
 
 class ArmyManager
 {
-    public function selectAllUnities()
+    public function selectAllUnits()
     {
         $client = HttpClient::create();
         $response = $client->request(
