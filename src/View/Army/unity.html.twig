@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block content %}
-
+<main>
+    <a href="../Home/apiSelector" ><img class="hamster-position" src="../assets/images/back-hamster.gif"></a>
+    <div class="container">
     <div class="battle-container">
         <div class="battle row">
             <div class="col-8 offset-2">
@@ -16,7 +18,7 @@
 
                 <div class="row">
                     <div class="col-6">
-                        <h2>Team 1</h2>
+                        <h2>Your army</h2>
                         <table class="table">
                             <thead>
                             <tr>
@@ -29,7 +31,7 @@
                                 {% for unity in units %}
                                     <tr>
                                         <th scope="row">
-                                            <input type="number" id="unit" name="{{ unity.name }}1"></th>
+                                            <input type="number" id="unit" name="{{ unity.name }}1" required></th>
                                         <td> {{ unity.name}} </td>
                                     </tr>
                                 {% endfor %}
@@ -37,7 +39,7 @@
                         </table>
                     </div>
                     <div class="col-6">
-                        <h2>Team 2</h2>
+                        <h2>Your enemy's army</h2>
                         <table class="table">
                             <thead>
                             <tr>
@@ -50,7 +52,7 @@
                                 {% for unity in units %}
                                     <tr>
                                         <td>
-                                            <input type="number" id="unit" name="{{ unity.name }}2"></th>
+                                            <input type="number" id="unit" name="{{ unity.name }}2" required></th>
                                         </td>
                                         <td> {{ unity.name}} </td>
                                     </tr>
@@ -73,7 +75,8 @@
 
         </div>
     </div>
-
+</div>
+</main>
 
 
 {% endblock %}

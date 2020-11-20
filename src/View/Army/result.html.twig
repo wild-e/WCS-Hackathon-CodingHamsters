@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+{% block title %}
+    {{ parent()}} Result
+{% endblock %}
+{% block content %}
+    <div class="result text-center">
+        {% if result is same as 1 %}
+            <img src="../assets/images/draw.gif" style="width:80%" alt="gif draw">
+            <meta http-equiv="refresh" content="6;URL=/Home/apiSelector">
+        {% elseif result is same as 2 %}
+            <img src="../assets/images/win.gif" style="width:80%" alt="gif win">
+            <meta http-equiv="refresh" content="6;URL=/Home/apiSelector">
+        {% elseif result is same as 3 %}
+            <img src="../assets/images/lose.gif" style="width:80%" alt="gif lose">
+            <meta http-equiv="refresh" content="6;URL=/Home/apiSelector">
+        {% endif %}
+    </div>
+{% endblock %}
