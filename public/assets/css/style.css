@@ -125,7 +125,7 @@ p {
     }
 
 .battle-container {
-    background-image: url("../images/background-simulation.jpg");
+    background-image: url("../images/background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -148,21 +148,34 @@ p {
     vector-effect: none;
 }
 
+.battle-container .battle{
+    margin: 0;
+}
+
 .battle-container table {
     font-family: 'MedievalSharp', cursive;
     font-size: 1.5em;
+    width:80%;
+    text-align: center;
+    background-color:#f7efd3 ;
+    min-height: 100%;
+}
+
+.battle-container td {
+    font-size: 1.2em;
+    text-align: left;
 }
 
 .battle-container .submit {
     background-color: black;
-    min-width:300px;
+    min-width:100%;
     font-family: 'MedievalSharp', cursive;
     font-size: 2em;
     border-radius: 5px;
     border: none;
     color:#f7efd3;
     box-shadow: 1px 1px 12px #f7efd3;
-    margin-top: 2rem;
+    margin-top: 7rem;
     margin-bottom: 4rem;
 }
 
