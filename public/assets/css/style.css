@@ -83,12 +83,47 @@ main{
     background-color: black;
 }
 
-
 p {
     color : var(--text-color);
     font-family: var(--text-font);
     font-size : 1em;
 }
+
+.weather-container{
+    background-image: url("../images/fondweather.png");
+    background-size: cover;
+    background-position-x : center;
+    width: 100%;
+    height: 100vh;
+}
+
+.weatherform{
+    background-color: #EADCB6;
+    border-radius: 1em;
+    border: 0.1em solid black;
+    box-shadow: -0.3em -0.3em black;
+}
+
+.description{
+    background-color: #EADCB6;
+    border-radius: 1em;
+    border: 0.1em solid black;
+    box-shadow: 0.3em -0.3em black;
+}
+
+.donne{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media screen and (min-width: 567px)
+{
+    .weatherform, .description{
+        margin: auto;
+        padding: auto;
+    }
 
 .weather-container{
     background-image: url("../images/fondweather.png");
@@ -159,6 +194,11 @@ background-size: cover;
 background-repeat: no-repeat;
 }
 
+.battle-container .submit:hover {
+    background-color: #475c6c;
+}
+
+
 .gridcontainer{
 
 display: grid;
@@ -168,6 +208,28 @@ grid-column-gap: 0px;
 grid-row-gap: 0px;
 
 }}
+
+}
+
+@media all and (min-width: 1025px) and (max-width: 1200px){
+
+.mapcontainer{
+
+background-image: url(../images/map-l.png);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.gridcontainer{
+
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+
+}
 @media all and (min-width: 769px) and (max-width: 1024px){
 
     .mapcontainer{
@@ -187,6 +249,7 @@ grid-row-gap: 0px;
     grid-row-gap: 0px;
     
     }}
+
     @media all and (max-width: 768px){
 
         .mapcontainer{
@@ -296,5 +359,3 @@ background-image: url(../images/howbutton1.png);
     .battle-container .submit:hover {
         background-color: #475c6c;
     }
-
-
