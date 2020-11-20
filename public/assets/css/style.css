@@ -182,3 +182,107 @@ p {
 .battle-container .submit:hover {
     background-color: #475c6c;
 }
+
+
+@media screen and (min-width: 1201px){
+
+
+.mapcontainer{
+
+background-image: url(../images/Map-xl.png);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.gridcontainer{
+
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+
+
+}
+
+@media all and (min-width: 1025px) and (max-width: 1200px){
+
+.mapcontainer{
+
+background-image: url(../images/map-l.png);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.gridcontainer{
+
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+
+}
+@media all and (min-width: 769px) and (max-width: 1024px){
+
+    .mapcontainer{
+    
+    background-image: url(../images/map-m.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    
+    .gridcontainer{
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    
+    }
+    @media all and (max-width: 768px){
+
+        .mapcontainer{
+        
+        background-image: url(../images/map-s.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+        
+        .gridcontainer{
+        
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        
+        }
+
+}
+
+#wiki-btn{
+
+
+background-image: url(../images/howbutton1.png);
+
+}
+
+#warsim-btn{
+
+
+    background-image: url(../images/army-sim1.png);
+    
+    }
+
+#travel-btn{
+
+
+    background-image: url(../images/messaging1.png);
+
+}    
