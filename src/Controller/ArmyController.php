@@ -64,14 +64,14 @@ class ArmyController extends AbstractController
             $attackTot2 += ($attChampion * $champion2);
             $attackTot2 += ($attPetard * $petard2);
             $difference = $attackTot1 - $attackTot2;
-            if ($difference === 0) {
-                $result = "It's Even !";
+            if ($difference == 0) {
+                $result = 1;
                 return $this->twig->render('Army/result.html.twig', ['result' => $result]);
             } elseif ($difference > 0) {
-                $result = "You win !";
+                $result = 2;
                 return $this->twig->render('Army/result.html.twig', ['result' => $result]);
             } else {
-                $result = "You loose !";
+                $result = 3;
                 return $this->twig->render('Army/result.html.twig', ['result' => $result]);
             }
         }
