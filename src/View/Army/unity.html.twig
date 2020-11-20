@@ -28,7 +28,7 @@
                                 {% for unity in units %}
                                     <tr>
                                         <th scope="row">
-                                            <input type="number" id="unit" name="{{ unity.name }}1"></th>
+                                            <input type="number" id="unit" name="{{ unity.name }}1" required></th>
                                         <td> {{ unity.name}} </td>
                                     </tr>
                                 {% endfor %}
@@ -49,7 +49,7 @@
                                 {% for unity in units %}
                                     <tr>
                                         <td>
-                                            <input type="number" id="unit" name="{{ unity.name }}2"></th>
+                                            <input type="number" id="unit" name="{{ unity.name }}2" required></th>
                                         </td>
                                         <td> {{ unity.name}} </td>
                                     </tr>
