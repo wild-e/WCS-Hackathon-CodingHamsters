@@ -35,4 +35,9 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('Weather/index.html.twig');
     }
+
+    public function apiSelector()
+    {
+        return $this->twig->render('ApiSelector/apiSelector.html.twig');
+    }
 }
