@@ -11,8 +11,6 @@ html{
 --secondary-color: #8a8583;
 --third-color: #cd8b62;
 --fourth-color: #eed7a1;
-color: var(--text-color);
-
 }
 
 
@@ -20,10 +18,13 @@ body{
 font-family: var(--text-font);
 color: var(--text-color);
 
+background-color: var(--main-color) !important;
+background: url("../images/background-paper.jpg") no-repeat center fixed; ;
+background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6{
-    padding : 4rem;
+    padding : 2rem;
     font-family: var(--title-font);
 }
 
@@ -31,12 +32,15 @@ a{
     color: var(--secondary-color);
 }
 
-main{
-    background-color: var(--main-color);
-}
-
 .container{
-    height: 100vh;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-bottom: 2rem;
+
+    background-color: var(--main-color);
+    opacity: 0.9;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px var(--secondary-color);
 }
 
 #orbisPlan{
@@ -83,6 +87,12 @@ main{
     background-color: black;
 }
 
+.hamster-position{
+    width: 150px;
+    position: absolute;
+}
+
+
 p {
     color : var(--text-color);
     font-family: var(--text-font);
@@ -100,15 +110,15 @@ p {
 .weatherform{
     background-color: #EADCB6;
     border-radius: 1em;
-    border: 0.1em solid black;
-    box-shadow: -0.3em -0.3em black;
+    border: 0.1em solid var(--secondary-color);
+    box-shadow: 3px 3px 3px var(--secondary-color);
 }
 
 .description{
     background-color: #EADCB6;
     border-radius: 1em;
-    border: 0.1em solid black;
-    box-shadow: 0.3em -0.3em black;
+    border: 0.1em solid var(--secondary-color);
+    box-shadow: 3px 3px 3px var(--secondary-color);
 }
 
 .donne{
@@ -124,6 +134,11 @@ p {
         margin: auto;
         padding: auto;
     }
+}
+
+.battle-container h2{
+    padding: 1rem;
+}
 
 .weather-container{
     background-image: url("../images/fondweather.png");
@@ -138,6 +153,11 @@ p {
     border-radius: 1em;
     border: 0.1em solid black;
     box-shadow: -0.3em -0.3em black;
+}
+
+.battle-container input:hover {
+    background-color: transparent;
+    /* vector-effect: none; */
 }
 
 .description{
@@ -206,8 +226,6 @@ grid-template-columns: repeat(5, 1fr);
 grid-template-rows: repeat(5, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
-
-}}
 
 }
 
@@ -291,6 +309,7 @@ background-image: url(../images/howbutton1.png);
 
     background-image: url(../images/messaging1.png);
 
+}    
 }
 
     .battle-container {
@@ -312,14 +331,12 @@ background-image: url(../images/howbutton1.png);
         width: 50%;
     }
 
-    .battle-container table td {
-    }
 }
 
 
     .battle-container input:hover {
         background-color: transparent;
-        vector-effect: none;
+        /* vector-effect: none; */
     }
 
     .battle-container .battle{
