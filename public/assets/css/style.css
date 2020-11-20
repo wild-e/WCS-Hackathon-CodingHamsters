@@ -11,8 +11,6 @@ html{
 --secondary-color: #8a8583;
 --third-color: #cd8b62;
 --fourth-color: #eed7a1;
-color: var(--text-color);
-
 }
 
 
@@ -20,19 +18,20 @@ body{
 font-family: var(--text-font);
 color: var(--text-color);
 
+background-color: var(--main-color) !important;
+background-image: url("../images/Page-Turner.svg");
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: top left;
 }
 
 h1, h2, h3, h4, h5, h6{
-    padding : 4rem;
+    padding : 2rem;
     font-family: var(--title-font);
 }
 
 a{
     color: var(--secondary-color);
-}
-
-main{
-    background-color: var(--main-color);
 }
 
 .container{
@@ -83,6 +82,11 @@ main{
     background-color: black;
 }
 
+.hamster-position{
+    width: 50px;
+    position:fixed;
+}
+
 
 p {
     color : var(--text-color);
@@ -90,13 +94,13 @@ p {
     font-size : 1em;
 }
 
-.weather-container{
+/* .weather-container{
     background-image: url("../images/fondweather.png");
     background-size: cover;
     background-position-x : center;
     width: 100%;
     height: 100vh;
-}
+} */
 
 .weatherform{
     background-color: #EADCB6;
@@ -126,14 +130,14 @@ p {
         padding: auto;
     }
 
-.battle-container {
+/* .battle-container {
     background-image: url("../images/background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
     max-width: 100%;
-}
+} */
 
 .battle-container h2{
     padding: 1rem;
@@ -147,7 +151,7 @@ p {
 
 .battle-container input:hover {
     background-color: transparent;
-    vector-effect: none;
+    /* vector-effect: none; */
 }
 
 .battle-container .battle{
@@ -288,4 +292,3 @@ background-image: url(../images/howbutton1.png);
     background-image: url(../images/messaging1.png);
 
 }    
-}
