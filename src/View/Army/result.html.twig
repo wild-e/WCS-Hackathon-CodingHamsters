@@ -3,16 +3,19 @@
     {{ parent()}} Result
 {% endblock %}
 {% block content %}
+<div class="container">
+    <h1 class="text-center">Battle Time !</h1>
     <div class="result text-center">
         {% if result is same as 1 %}
-            <img src="../assets/images/draw.gif" style="width:80%" alt="gif draw">
+            <img src="../assets/images/new-draw.gif" style="width:100%" alt="gif draw">
             <meta http-equiv="refresh" content="6;URL=/Home/apiSelector">
         {% elseif result is same as 2 %}
-            <img src="../assets/images/win.gif" style="width:80%" alt="gif win">
+            <img src="../assets/images/new-win.gif" style="width:100%" alt="gif win">
             <meta http-equiv="refresh" content="6;URL=/Home/apiSelector">
         {% elseif result is same as 3 %}
-            <img src="../assets/images/lose.gif" style="width:80%" alt="gif lose">
+            <img src="../assets/images/new-lose.gif" style="width:100%" alt="gif lose">
             <meta http-equiv="refresh" content="6;URL=/Home/apiSelector">
         {% endif %}
     </div>
+</div>
 {% endblock %}
