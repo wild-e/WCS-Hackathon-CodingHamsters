@@ -1,8 +1,11 @@
 {% extends 'layout.html.twig' %}
 
+{% block title %}
+    {{parent()}} | Quote
+{% endblock %}
+
 {% block content %}
-    <h1>Quote of the day :</h1>
+    <h1>Your inspirationnal quote of the day :</h1>
     <h2>{{ quote.quoteText }}</h2>
     <h3>{{ quote.quoteAuthor }}</h3>
-
 {% endblock %}

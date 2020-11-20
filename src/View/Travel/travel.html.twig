@@ -1,0 +1,19 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {{parent()}} - Plan your troup's route
+{% endblock %}
+
+{% block content %}
+    <main>
+        <div class="container">
+            <h1 class="text-center" >Plan your troup's route</h1>
+            <p class="text-center">Plan your troup's mouvement according to the possible routes, your means of transport and the time of the year</p>
+
+            <iframe id="orbisPlan"
+            title="Plan your troup's route"
+            src="https://orbis.stanford.edu">
+            </iframe>
+        </div>
+    </main>
+{% endblock %}
