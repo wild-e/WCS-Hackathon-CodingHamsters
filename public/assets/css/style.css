@@ -148,13 +148,6 @@ p {
     height: 100vh;
 }
 
-.weatherform{
-    background-color: #EADCB6;
-    border-radius: 1em;
-    border: 0.1em solid black;
-    box-shadow: -0.3em -0.3em black;
-}
-
 .battle-container input:hover {
     background-color: transparent;
     /* vector-effect: none; */
@@ -227,7 +220,7 @@ grid-template-rows: repeat(5, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
 
-}
+}}
 
 @media all and (min-width: 1025px) and (max-width: 1200px){
 
@@ -247,7 +240,7 @@ grid-template-rows: repeat(5, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
 
-}
+}}
 @media all and (min-width: 769px) and (max-width: 1024px){
 
     .mapcontainer{
@@ -310,33 +303,10 @@ background-image: url(../images/howbutton1.png);
     background-image: url(../images/messaging1.png);
 
 }    
-}
 
-    .battle-container {
-        background-image: url("../images/horse-background.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        max-width: 100%;
-    }
-
-    .battle-container h2{
-        padding: 1rem;
-    }
-
-    .battle-container input {
-        background-color: transparent;
+.battle-container input {
         font-family: 'Oswald', sans-serif;
-        width: 50%;
-    }
-
-}
-
-
-    .battle-container input:hover {
-        background-color: transparent;
-        /* vector-effect: none; */
+        max-width: 100px;
     }
 
     .battle-container .battle{
@@ -349,9 +319,7 @@ background-image: url(../images/howbutton1.png);
         width:80%;
         text-align: center;
         min-height: 100%;
-        background-color: black;
         border-radius: 5px;
-        color:#f7efd3;
         box-shadow: 1px 1px 12px #f7efd3;
     }
 
