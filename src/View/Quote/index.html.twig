@@ -1,11 +1,18 @@
 {% extends 'layout.html.twig' %}
 
 {% block title %}
-    {{parent()}} - Quote
+    {{parent()}} | Quote
 {% endblock %}
 
 {% block content %}
-    <h1>Quote of the day :</h1>
-    <h2>{{ quote.quoteText }}</h2>
-    <h3>{{ quote.quoteAuthor }}</h3>
+    <main>
+        <a href="../Home/apiSelector" ><img class="hamster-position" src="../assets/images/back-hamster.gif"></a>
+        <div class="container text-center">
+            <h1>Your inspirationnal quote of the day :</h1>
+            <blockquote>
+                <p>'{{ quote.quoteText }}'</p>
+            </blockquote>
+            <figcaption>{{ quote.quoteAuthor }}</figcaption>
+        </div>
+    </main>
 {% endblock %}
