@@ -1,27 +1,28 @@
+{% extends 'layout.html.twig' %}
 {% block content %}
-    <div class="map-container">
+    <div class="map">
 
-        <div class="grid-container">
+        <div class="grid">
             
             <div class="wiki">
-                <a id="wiki-btn" href="../Wiki/wiki">WikiWar</a>
+                <a href="../Wiki/wiki" id="wiki-btn"  ><img class="logo" src="../assets/images/howbutton1.png" width="200px"></a>
             </div>
             <div class="warsim">
-                <a id="warsim-btn" href="../Army/list">Combat Simulator</a>
+                <a href="../Army/list" id="warsim-btn" ><img class="logo" src="../assets/images/army-sim1.png" width="200px"></a>
             </div>
             <div class="travel">
-                <a id="travel-btn" href="../Travel/travel"></a>   
+                <a href="../Travel/travel" id="travel-btn" ><img class="logo" src="../assets/images/messaging1.png" width="200px"</a>   
             </div>
             <div class="quote">
-                <a id="quote-btn" href="../Quote/list">Quote</a>   
+                <a href="../Quote/list" id="quote-btn" class="logo" width="200px"></a>   
             </div>
             <div class="weather">
-                <a id="weather-btn" href="../Weather/weather">Weather</a>   
+                <a href="../Weather/weather" id="weather-btn" ><img class="logo" src="../assets/images/meteo1.png" width="200px"></a>   
             </div>
         </div>
 
     </div>
     <div class="message-board">
-    <h1 id="messageBox"></h1>
+    <h1 id="messageBox">coucou</h1>
     </div>
 {% endblock %}
