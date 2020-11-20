@@ -7,45 +7,72 @@
 {% block content %}
 
     <div class="battle-container">
-        <div class="row">
+        <div class="battle row">
             <div class="col-8 offset-2">
 
                 <h1>Battle simulation</h1>
-                <h3>The best way to know if you are going to win the fight is to send men to do the work,
-                 but, you can still get a little idea of the day you are going to live by filling out this form</h3>
-                <h2>Team 1</h2>
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">Number of units</th>
-                        <th scope="col">Units name</th>
-                        <th scope="col">Number of units</th>
-                        <th scope="col">Units name</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <form method="post">
-                        {% for unity in units %}
+                <h3>The best way to know if you are going to win the fight is to send men to do the work, 
+                but, you can still get a little idea of the day you are going to live by filling out this form</h3>
+
+                <div class="row">
+                    <div class="col-6">
+                        <h2>Team 1</h2>
+                        <table class="table">
+                            <thead>
                             <tr>
-                                <th scope="row">
-                                    <input type="number" id="unit" name="{{ unity.name }}1"></th>
-                                <td> {{ unity.name}} </td>
-                                <td>
-                                    <input type="number" id="unit" name="{{ unity.name }}2"></th>
-                                </td>
-                                <td> {{ unity.name}} </td>
+                                <th scope="col">Number of units</th>
+                                <th scope="col">Units name</th>
                             </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-                <input class="submit" type="submit" value="Submit">
+                            </thead>
+                            <tbody>
+                            <form method="post" action="/Army/combat">
+                                {% for unity in units %}
+                                    <tr>
+                                        <th scope="row">
+                                            <input type="number" id="unit" name="{{ unity.name }}1"></th>
+                                        <td> {{ unity.name}} </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-6">
+                        <h2>Team 2</h2>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Number of units</th>
+                                <th scope="col">Units name</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <form method="post" action="/Army/combat">
+                                {% for unity in units %}
+                                    <tr>
+                                        <td>
+                                            <input type="number" id="unit" name="{{ unity.name }}2"></th>
+                                        </td>
+                                        <td> {{ unity.name}} </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="mt-5 mb-5 row">
+                    <div class="col-4 mt-5 offset-4">
+                        <input class="submit" type="submit" value="Submit">
+                    </div>
+
+                </div>
+
                 </form>
 
             </div>
 
         </div>
     </div>
-
 
 
 
