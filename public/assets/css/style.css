@@ -13,6 +13,7 @@ html{
 --fourth-color: #eed7a1;
 }
 
+
 body{
 font-family: var(--text-font);
 color: var(--text-color);
@@ -113,6 +114,7 @@ p {
     margin: 0;
     padding: 0;
 }
+
 
 @media screen and (min-width: 567px)
 {

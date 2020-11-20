@@ -7,7 +7,7 @@
         <div class="container">
             <h1 class="text-center" >Search Page</h1>
             <p class="text-center">Search how to repair your weapons or informations about your enemies... A good search is always helpfull</p>
-            <form method="post">
+            <form  method="post">
                 <div class="form-group">
                     <label for="search">Enter your request</label>
                     <input type="text" class="form-control" name="search" id="search" required>
@@ -19,7 +19,7 @@
                     <div class="card" style="width: 100%">
                         <div class="card-body">
                             <img class="card-img-top" src="{{searchImage}}" alt="{{searchResult.title}}">
-                            <h5 class="card-title text-center">{{searchResult.title}}</h5>
+                            <h5 class="card-title text-center" style="padding : none;">{{searchResult.title}}</h5>
                             <p class="card-text">{{searchResult.snippet|raw}}</p>
                             <a target="_blank" href="https://en.wikipedia.org/wiki/{{searchResult.title}}" class="btn btn-primary">See more on Wiki</a>
                         </div>
