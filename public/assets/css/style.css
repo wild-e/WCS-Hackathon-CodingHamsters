@@ -11,6 +11,8 @@ html{
 --secondary-color: #8a8583;
 --third-color: #cd8b62;
 --fourth-color: #eed7a1;
+color: var(--text-color);
+
 }
 
 
@@ -183,6 +185,9 @@ p {
     background-color: #475c6c;
 }
 
+<<<<<<< HEAD
+}
+=======
 
 @media screen and (min-width: 1201px){
 
@@ -286,3 +291,4 @@ background-image: url(../images/howbutton1.png);
     background-image: url(../images/messaging1.png);
 
 }    
+>>>>>>> ac14b837d7b80bead2fb7057abd5643c0f357f9e
